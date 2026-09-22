@@ -5,6 +5,7 @@ import {
   Linkedin,
   Mail,
 } from "lucide-react";
+import profilePhoto from "../../imports/profile.jpg";
 
 export function Hero() {
   return (
@@ -82,7 +83,7 @@ export function Hero() {
             </div>
           </div>
 
-          {/* RZ Avatar circle */}
+          {/* Profile photo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -91,10 +92,12 @@ export function Hero() {
           >
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-2xl opacity-30"></div>
-              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center border-4 border-blue-500/50 shadow-2xl">
-                <span className="text-white font-bold text-8xl md:text-9xl tracking-wider">
-                  RZ
-                </span>
+              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-500/50 shadow-2xl">
+                <img
+                  src={profilePhoto}
+                  alt="Ritadj Zekkour"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </motion.div>

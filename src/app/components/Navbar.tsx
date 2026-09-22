@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import { X, Menu } from "lucide-react";
 import { useState } from "react";
+import profilePhoto from "../../imports/profile.jpg";
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -26,15 +27,17 @@ export function Navbar() {
       >
         <div className="container mx-auto px-4 md:px-8 py-4">
           <div className="flex items-center justify-between">
-            {/* Logo Section — initials circle */}
+            {/* Logo Section — profile photo */}
             <motion.a
               href="#"
               whileHover={{ scale: 1.05 }}
               className="flex items-center gap-3"
             >
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center border-2 border-blue-500">
-                <span className="text-white font-bold text-lg">RZ</span>
-              </div>
+              <img
+                src={profilePhoto}
+                alt="Ritadj Zekkour"
+                className="w-12 h-12 rounded-full object-cover border-2 border-blue-500"
+              />
               <div>
                 <h1 className="text-xl font-bold text-white">Ritadj Zekkour</h1>
                 <p className="text-xs text-gray-400 flex items-center gap-1">
